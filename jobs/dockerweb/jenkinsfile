@@ -24,7 +24,7 @@ pipeline {
                     //sh ''' 
                     bat '''
                          :: docker stop ${name_final}
-                         :: docker stop %name_final%
+                         docker stop %name_final%
                     '''
                     }
                 }                    
