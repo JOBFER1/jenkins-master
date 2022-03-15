@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script{
                     bat ''' 
-                    REM docker build jobs/dockerweb/ -t ${name_imagen}:${tag_imagen} 
+                    :: docker build jobs/dockerweb/ -t ${name_imagen}:${tag_imagen} 
                     docker build jobs/dockerweb/ -t imagen-borrame 
                     '''
                     }
