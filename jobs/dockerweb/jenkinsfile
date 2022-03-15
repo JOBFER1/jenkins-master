@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script{
                     bat ''' 
-                    docker build -t ${name_imagen}:${tag_imagen} jobs/dockerweb/
+                    docker build jobs/dockerweb/ -t ${name_imagen}:${tag_imagen} 
                     '''
                     }
                     
