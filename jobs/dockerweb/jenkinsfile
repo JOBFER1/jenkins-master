@@ -18,9 +18,10 @@ pipeline {
                     DOCKER_EXIST = bat(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
                     bat('echo %DOCKER_EXIST%'+'hola')
                     bat('echo %DOCKER_EXIST% pepe')
+                    echo env.DOCKER_EXIST
                     bat('echo adios')
                     //return  DOCKER_EXIST != ''
-                    echo env DOCKER_EXIST
+                    
                     return  false
                     
                     //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
