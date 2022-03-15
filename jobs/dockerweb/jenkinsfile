@@ -19,7 +19,7 @@ pipeline {
                     bat('echo %DOCKER_EXIST%'+'hola')
                     bat('echo %DOCKER_EXIST%')
                     bat('echo adios')
-                    bat('echo DOCKER_EXIST')
+                    bat('echo ${DOCKER_EXIST}')
                     return  DOCKER_EXIST != ''
                     
                     //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
