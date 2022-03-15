@@ -20,6 +20,7 @@ pipeline {
                     bat('echo %DOCKER_EXIST% pepe')
                     bat('echo adios')
                     //return  DOCKER_EXIST != ''
+                    echo env DOCKER_EXIST
                     return  false
                     
                     //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
