@@ -19,6 +19,7 @@ pipeline {
                     bat('echo %DOCKER_EXIST%'+'hola')
                     bat('echo %DOCKER_EXIST% pepe')
                     echo env.DOCKER_EXIST
+                    echo DOCKER_EXIST
                     bat('echo adios')
                     //return  DOCKER_EXIST != ''
                     
