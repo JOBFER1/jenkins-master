@@ -32,9 +32,9 @@ pipeline {
                          docker stop %name_final%
                          docker rm %name_final%
                     '''
-                    }
-                }                    
-            }
+				}
+			}                    
+		}
            
         stage('build') {
             steps {
@@ -44,12 +44,11 @@ pipeline {
                     docker build jobs/dockerweb/ -t %name_imagen%:%tag_imagen%
                     :: docker build jobs/dockerweb/ -t imagen-borrame 
                     '''
-                    }
-                    
-                }                    
+				}
+			}                    
                                   
-            }
-            stage('run') {
+		}
+ 		stage('run') {
             steps {
                 script{
                     bat ''' 
@@ -60,6 +59,6 @@ pipeline {
                     '''
                     }
                 }                    
-            }
-        }   
-    }  
+		}
+	}   
+}  
