@@ -17,7 +17,11 @@ pipeline {
                     //DOCKER_EXIST = sh(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
                     DOCKER_EXIST = bat(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
                     bat('echo %DOCKER_EXIST%')
-                    return  DOCKER_EXIST != '' 
+                    return  DOCKER_EXIST != ''
+                    
+                    //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
+                    //y da error cuando no lo encuentra
+                    //En ese caso (cuando no lo encuentra) no deberia intentar pararlo y borrarlo 
                 }
             }
             steps {
