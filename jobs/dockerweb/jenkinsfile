@@ -27,7 +27,7 @@ pipeline {
                     }
                     if(DOCKER_EXIST.trim() != '') {
                     	echo 'lleno'
-                    	return true
+                    	return false
                     }
                     //return  DOCKER_EXIST != ''
                     
