@@ -17,7 +17,7 @@ pipeline {
                     //DOCKER_EXIST = sh(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
                     DOCKER_EXIST = bat(returnStdout: true, script: 'docker ps -q --filter name=%name_final%').trim()
                     echo 'hola'
-                    echo DOCKER_EXIST.length()
+                    echo DOCKER_EXIST.length() + ''
                     echo "${DOCKER_EXIST}"
                     echo 'adios'
                     
