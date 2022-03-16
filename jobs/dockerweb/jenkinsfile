@@ -24,9 +24,15 @@ pipeline {
 //                    echo DOCKER_EXIST != null
                     bat('echo adios')
                     //return  DOCKER_EXIST != ''
-                    if(DOCKER_EXIST == '') {echo 'vacio'}
-                    if(DOCKER_EXIST != '') {echo 'lleno'}
-                    return  DOCKER_EXIST != ''
+                    if(DOCKER_EXIST == '') {
+                    	echo 'vacio'
+                    	return false
+                    }
+                    if(DOCKER_EXIST != '') {
+                    	echo 'lleno'
+                    	return true
+                    }
+                    //return  DOCKER_EXIST != ''
                     
                     //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
                     //y da error cuando no lo encuentra
