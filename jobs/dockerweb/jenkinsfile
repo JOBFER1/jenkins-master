@@ -19,11 +19,12 @@ pipeline {
                     bat('echo %DOCKER_EXIST% pepe')
                     echo DOCKER_EXIST
 //                    echo DOCKER_EXIST = '' //null
-                    echo '' + DOCKER_EXIST != ''
+//                    echo '' + DOCKER_EXIST != ''
 //                    echo DOCKER_EXIST = null
 //                    echo DOCKER_EXIST != null
                     bat('echo adios')
                     //return  DOCKER_EXIST != ''
+                    if(DOCKER_EXIST == '') {echo 'vacio'}
                     return  DOCKER_EXIST != null
                     
                     //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
