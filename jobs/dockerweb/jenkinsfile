@@ -20,7 +20,8 @@ pipeline {
                     echo DOCKER_EXIST.length() + ''
                     echo "${DOCKER_EXIST}"
                     echo 'adios'
-                    
+
+                    /*
                     if(DOCKER_EXIST.length() == 0) {  
                     	echo 'vacio'
                     	return false
@@ -29,11 +30,9 @@ pipeline {
                     	echo 'lleno'
                     	return true
                     }
-                    //return  DOCKER_EXIST != ''
-                    
-                    //TODO: Esta condicion no funciona bien. Siempre intenta parar y borrar el contenedor
-                    //y da error cuando no lo encuentra
-                    //En ese caso (cuando no lo encuentra) no deberia intentar pararlo y borrarlo 
+                    */
+
+                    return  DOCKER_EXIST != ''
                 }
             }
             steps {
