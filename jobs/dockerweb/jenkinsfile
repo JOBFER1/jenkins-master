@@ -21,11 +21,11 @@ pipeline {
                     echo "${DOCKER_EXIST}"
                     echo 'adios'
                     
-                    if(DOCKER_EXIST.length() <= 104) {  //si no encuentra el contenedor, devuelve una cadena de longitud 104
+                    if(DOCKER_EXIST.length() == 0) {  
                     	echo 'vacio'
                     	return false
                     }
-                    if(DOCKER_EXIST.length() > 104) {  //si encuentra el contenedor, devuelve una cadena de longitud 119
+                    if(DOCKER_EXIST.length() > 0) {  
                     	echo 'lleno'
                     	return true
                     }
